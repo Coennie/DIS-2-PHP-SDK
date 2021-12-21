@@ -134,6 +134,11 @@ class Sender extends DataObject
     protected $EoriNumber;
 
     /**
+     * @var int $CustomerNumber
+     */
+    protected $CustomerNumber;
+
+    /**
      * @return string
      */
     public function getName1()
@@ -528,4 +533,21 @@ class Sender extends DataObject
         $this->EoriNumber = $EoriNumber;
         return $this;
     }
+
+    /**
+     * @return int
+     */
+    public function getCustomerNumber()
+    {
+        return $this->CustomerNumber;
+    }
+
+    /**
+     * @param int $CustomerNumber
+     */
+    public function setCustomerNumber($CustomerNumber)
+    {
+        $this->CustomerNumber = $CustomerNumber;
+    }
+
 }

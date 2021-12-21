@@ -64,6 +64,11 @@ class Parcel extends DataObject
     protected $Cod;
 
     /**
+     * @var bool $returns
+     */
+    protected $returns;
+
+    /**
      * @return string
      */
     public function getParcelNumber()
@@ -189,5 +194,21 @@ class Parcel extends DataObject
     public function setCod($Cod)
     {
         $this->Cod = $Cod;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isReturns()
+    {
+        return $this->returns;
+    }
+
+    /**
+     * @param bool $returns
+     */
+    public function setReturns($returns)
+    {
+        $this->returns = $returns;
     }
 }

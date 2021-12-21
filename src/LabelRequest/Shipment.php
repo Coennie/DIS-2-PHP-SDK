@@ -89,6 +89,11 @@ class Shipment extends DataObject
     protected $Parcels = array();
 
     /**
+     * @var string $OrderType
+     */
+    protected $OrderType;
+
+    /**
      * @return string
      */
     public function getCustomerReference1()
@@ -294,5 +299,21 @@ class Shipment extends DataObject
     public function setParcels($Parcel)
     {
         $this->Parcels[] = $Parcel->toArray();
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrderType()
+    {
+        return $this->OrderType;
+    }
+
+    /**
+     * @param string $OrderType
+     */
+    public function setOrderType($OrderType)
+    {
+        $this->OrderType = $OrderType;
     }
 }
